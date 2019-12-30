@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">872582672980-e15adfb8flui724bjo4ot60irhnkd7r3.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://swole-50570.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">872582672980</string>
+    <string name="google_api_key" translatable="false">AIzaSyBwcTxNAH0TsoMWhe9xiw6NITmardxS-Zs</string>
+    <string name="google_app_id" translatable="false">1:872582672980:android:a1bc6ad020631ffc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBwcTxNAH0TsoMWhe9xiw6NITmardxS-Zs</string>
+    <string name="google_storage_bucket" translatable="false">swole-50570.appspot.com</string>
+    <string name="project_id" translatable="false">swole-50570</string>
+</resources>

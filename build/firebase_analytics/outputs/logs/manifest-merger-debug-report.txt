@@ -1,0 +1,31 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:2:3-49
+		INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml
+		INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:4:3-77
+	android:name
+		ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:4:20-74
+uses-permission#android.permission.INTERNET
+ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:5:3-65
+	android:name
+		ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:5:20-62
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:6:3-66
+	android:name
+		ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml:6:20-63
+uses-sdk
+INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml
+INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml
+		ADDED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml
+		INJECTED from /home/aphrx/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-3.0.2/android/src/main/AndroidManifest.xml

@@ -11,9 +11,20 @@ class DetailPage extends StatefulWidget {
   _DetailPageState createState() => _DetailPageState();
 }
  
-class _DetailPageState extends State<DetailPage> {
+class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateMixin{
   int total = 0;
   int loaded = 0;
+
+  TabController _tabController;
+
+
+ void initState(){
+   _tabController = new TabController(length: 2, vsync: this);
+ }
+
+  void dispose(){
+   _tabController.dispose();
+ }
 
   // View Detail Workout Page
   @override
@@ -22,11 +33,38 @@ class _DetailPageState extends State<DetailPage> {
       total = widget.workout.data["total"];
       loaded = 1;
     }
-    return new Scaffold(
-      backgroundColor: Color.fromRGBO(20, 20, 20, 1),
-      appBar: new AppBar(
-      
-        title: new Center(child: new Text(widget.workout.data["title"], textAlign: TextAlign.center)),
+        return DefaultTabController(
+          length: 2,
+          child:
+        new Scaffold(
+          backgroundColor: Color.fromRGBO(20, 20, 20, 1),
+          appBar: new AppBar(
+          
+            title: new Center(child: new Text(widget.workout.data["title"], textAlign: TextAlign.center)),
+            bottom: TabBar(
+             unselectedLabelColor: Colors.white,
+             labelColor: Colors.white,
+             indicatorSize: TabBarIndicatorSize.label,
+             indicator: BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+              color: Color.fromRGBO(20 , 20, 20, 1),
+             ),
+             controller: _tabController,
+         tabs: <Widget>[
+           Tab(
+             child: Align(
+               alignment: Alignment.center,
+               child: Text("Exercises"),
+             ),
+           ),
+           Tab(
+             child: Align(
+               alignment: Alignment.center,
+               child: Text("History"),
+             ),
+           ),
+         ],
+       ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.delete),
@@ -38,7 +76,14 @@ class _DetailPageState extends State<DetailPage> {
           )
         ]
       ),
-      body: Center(
+      body: TabBarView(
+        controller: _tabController,
+        children: <Widget>[
+          
+          Column(
+        children: <Widget>[
+          Expanded(
+            child:       Center(
         child: Padding(padding: EdgeInsets.all(15),
           child: FutureBuilder(
             future: getExercise(),
@@ -53,21 +98,17 @@ class _DetailPageState extends State<DetailPage> {
                   itemBuilder: (_, index) {
 
                     return InkWell(
-                                 child:Container(
-                                 padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                 height: 60,
-                                 child: ListTile(
-                                  
-                                  title: Text(snapshot.data[index].data["title"], style: new TextStyle(fontSize: 16, color: Colors.white),)
-                                )              
-                               ),
-                               
-                               onTap: () => navigateToExerciseDetail(snapshot.data[index]),
-                            
-                            
-                             );
-
-
+                      child:Container(
+                      padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                      height: 60,
+                      child: ListTile(
+                      
+                      title: Text(snapshot.data[index].data["title"], style: new TextStyle(fontSize: 16, color: Colors.white),)
+                    )              
+                    ),
+                    
+                    //onTap: () => navigateToExerciseDetail(snapshot.data[index]),  
+                    );
                   }
                 );
               }
@@ -75,16 +116,26 @@ class _DetailPageState extends State<DetailPage> {
           )
         )   
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          addExerciseDialog();
-        },
-        label: Text('Add Exercise'),
-        icon: Icon(Icons.plus_one),
-        backgroundColor: Colors.green,
-      ),
-    );
+          ),
+          Center(child: 
+                      FlatButton(
+                        child: Text("Add Exercise", style:TextStyle(color: Colors.white)),
+                        onPressed: () => addExerciseDialog(),
+                      )),
+                      Center(child: 
+                      FlatButton(
+                        child: Text("Start New Workout", style:TextStyle(color: Colors.white)),
+                        onPressed: () => addExerciseDialog(),
+                      ))
+        ]), 
+        Container(
+          child: Text("Coming soon!", style: TextStyle(color: Colors.white),),
+        )]
+        )));
+
   }
+
+  
 
   // Open Exercise Details Page
   navigateToExerciseDetail(DocumentSnapshot exercise){

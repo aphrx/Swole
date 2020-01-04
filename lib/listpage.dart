@@ -304,7 +304,7 @@ void logout(){
                      ),),
                      Center(child: 
                       FlatButton(
-                        child: Text("Add Workout", style:TextStyle(color: Colors.white)),
+                        child: Text("Add Workout Entry", style:TextStyle(color: Colors.white)),
                         onPressed: () => choice("Add Workout"),
                       ))
                      ]);
